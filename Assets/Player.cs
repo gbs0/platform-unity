@@ -20,26 +20,20 @@ public class Player : MonoBehaviour
     	Vector2 mov = rb.velocity;
 
 
-      if (Input.GetKey(KeyCode.RightArrow)) {
-        mov.x = 5;                        
-      } else {
-      	mov.x = 0;
-      }
+      // if (Input.GetKey(KeyCode.RightArrow)) {
+      //   mov.x = 5;                        
+      // } else {
+      // 	mov.x = 0;
+      // }
 
-      if (Input.GetKey(KeyCode.LeftArrow)) {
-        mov.x = -5;  
-      } else {
-      	mov.x = 0;
-      }
+      // if (Input.GetKey(KeyCode.LeftArrow)) {
+      //   mov.x = -5;  
+      // } else {
+      // 	mov.x = 0;	
+      // }
 
-      if (Input.GetKey(KeyCode.UpArrow)) {
-          
-      }
+      mov.x = Input.GetAxis("Horizontal") * 5; 
 
-      if (Input.GetKey(KeyCode.DownArrow)) {
-          
-      }
-
-        rb.velocity = mov;
+      rb.velocity = mov;
     }
 }
