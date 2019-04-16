@@ -32,7 +32,8 @@ public class Player : MonoBehaviour
       // 	mov.x = 0;	
       // }
 
-      mov.x = Input.GetAxis("Horizontal") * 5; 
+      mov.x = Input.GetAxis("Horizontal") * 5;
+      mov.y = Input.GetAxis("Vertical") * 5; 
 
       rb.velocity = mov;
     }
