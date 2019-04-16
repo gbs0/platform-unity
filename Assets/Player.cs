@@ -19,15 +19,17 @@ public class Player : MonoBehaviour
 
     	Vector2 mov = rb.velocity;
 
-    	
+
       if (Input.GetKey(KeyCode.RightArrow)) {
-          mov.x = 5;                        
+        mov.x = 5;                        
       } else {
-      	  mov.x = 0;
+      	mov.x = 0;
       }
 
       if (Input.GetKey(KeyCode.LeftArrow)) {
-          
+        mov.x = -5;  
+      } else {
+      	mov.x = 0;
       }
 
       if (Input.GetKey(KeyCode.UpArrow)) {
