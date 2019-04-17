@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public LayerMask groundLayer;
     Rigidbody2D rb;
 
     BoxCollider2D groundCheck;
@@ -18,8 +19,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      Vector2 groundCenter = (Vector2)groundCheck.transform.position + groundCheck.offset;
+    	groundCollision = Physics2D.OverlapBox(groundCenter, groundCheck.size, float 0, groundLayer);
 
-    	Vector2 mov = rb.velocity;
+      if (groundCollision != null) {
+
+      } else { }
+
+      Vector2 mov = rb.velocity;
 
 
       // if (Input.GetKey(KeyCode.RightArrow)) {
