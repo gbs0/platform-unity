@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public LayerMask groundLayer;
+    
     Rigidbody2D rb;
-
     BoxCollider2D groundCheck;
 
     // Start is called before the first frame update
