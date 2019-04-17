@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     void Update()
     {
       Vector2 groundCenter = (Vector2)groundCheck.transform.position + groundCheck.offset;
-    	groundCollision = Physics2D.OverlapBox(groundCenter, groundCheck.size, float 0, groundLayer);
+    	groundCollision = Physics2D.OverlapBox(groundCenter, groundCheck.size, 0, groundLayer);
 
       if (groundCollision != null) {
         onTheFloor = true;
