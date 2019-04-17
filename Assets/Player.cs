@@ -23,11 +23,10 @@ public class Player : MonoBehaviour
     	groundCollision = Physics2D.OverlapBox(groundCenter, groundCheck.size, float 0, groundLayer);
 
       if (groundCollision != null) {
-
-      } else { }
+        onTheFloor = true;
+      } else { onTheFloor = false; }
 
       Vector2 mov = rb.velocity;
-
 
       // if (Input.GetKey(KeyCode.RightArrow)) {
       //   mov.x = 5;                        
@@ -43,7 +42,7 @@ public class Player : MonoBehaviour
 
       mov.x = Input.GetAxis("Horizontal") * 5;
       
-      if (Input.GetAxis("Jump") > 0) {
+      if (onTheFloor && Input.GetAxis("Jump") > 0) {
         mov.y = 10;
       } 
 
